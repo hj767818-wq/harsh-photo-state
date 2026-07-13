@@ -34,12 +34,7 @@ export const metadata: Metadata = {
     "PVC Card Printing Moradabad",
   ],
 
-  authors: [
-    {
-      name: "Harsh Photo State",
-    },
-  ],
-
+  authors: [{ name: "Harsh Photo State" }],
   creator: "Harsh Photo State",
   publisher: "Harsh Photo State",
 
@@ -79,6 +74,53 @@ export const metadata: Metadata = {
   category: "Printing Services",
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "Harsh Photo State",
+  image: `${siteUrl}/favicon.ico`,
+  url: siteUrl,
+  telephone: ["+91 9012957441", "+91 8171746421"],
+  email: "harshphotostate@gmail.com",
+  priceRange: "₹",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Manpur Gali No. 1, Budh Bazar",
+    addressLocality: "Moradabad",
+    addressRegion: "Uttar Pradesh",
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 28.83492897534458,
+    longitude: 78.77386179240708,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:00",
+      closes: "20:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "10:00",
+      closes: "14:00",
+    },
+  ],
+  sameAs: [
+    "https://maps.app.goo.gl/aKHfM7h4jc7DQZvaA",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -87,6 +129,13 @@ export default function RootLayout({
   return (
     <html lang="en-IN" className={outfit.variable}>
       <body className="min-h-screen bg-white font-sans text-slate-900 antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+
         {children}
       </body>
     </html>
