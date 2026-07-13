@@ -1,5 +1,6 @@
 import AOSProvider from "../components/AOSProvider";
 import LoadingScreen from "../components/LoadingScreen";
+import ScrollProgress from "../components/ScrollProgress";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import StatsCounter from "../components/StatsCounter";
@@ -13,11 +14,14 @@ import Map from "../components/Map";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 import MobileActionBar from "../components/MobileActionBar";
+import ScrollToTop from "../components/ScrollToTop";
+import OfferButton from "../components/OfferButton";
 
 export default function Home() {
   return (
     <>
       <LoadingScreen />
+      <ScrollProgress />
       <AOSProvider />
       <Navbar />
 
@@ -34,6 +38,9 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      <OfferButton />
+      <ScrollToTop />
       <WhatsAppButton />
       <MobileActionBar />
     </>
