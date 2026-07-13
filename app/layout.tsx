@@ -72,13 +72,17 @@ export const metadata: Metadata = {
   },
 
   category: "Printing Services",
+
+  verification: {
+    google: "IsgKOKCRBWF8TL0BHzN2Ca6lgfPrzUA9wj_DyAoinro",
+  },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   name: "Harsh Photo State",
-  image: `${siteUrl}/favicon.ico`,
+  image: `${siteUrl}/icon`,
   url: siteUrl,
   telephone: ["+91 9012957441", "+91 8171746421"],
   email: "harshphotostate@gmail.com",
@@ -116,9 +120,7 @@ const localBusinessSchema = {
       closes: "14:00",
     },
   ],
-  sameAs: [
-    "https://maps.app.goo.gl/aKHfM7h4jc7DQZvaA",
-  ],
+  sameAs: ["https://maps.app.goo.gl/aKHfM7h4jc7DQZvaA"],
 };
 
 export default function RootLayout({
