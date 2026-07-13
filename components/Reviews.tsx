@@ -1,74 +1,112 @@
+"use client";
+
+import { Star } from "lucide-react";
+
 const reviews = [
   {
-    name: "Rahul Sharma",
+    name: "Aman Sharma",
     review:
-      "Fast printing service and very good print quality. Project time par ready mil gaya.",
+      "Very fast printing service. Project printing aur spiral binding bahut achi quality ki thi.",
+    date: "2 weeks ago",
   },
   {
-    name: "Aman Jain",
+    name: "Priya Verma",
     review:
-      "Affordable price aur staff ka behaviour bhi bahut accha hai. Recommended for students.",
+      "Colour print quality amazing thi. Staff bhi bahut polite tha.",
+    date: "1 month ago",
   },
   {
-    name: "Mohit Kumar",
+    name: "Rohit Kumar",
     review:
-      "Photocopy, colour print aur binding sab ek hi jagah mil jata hai. Service kaafi quick hai.",
+      "PVC Card same day bana diya. Highly recommended.",
+    date: "3 weeks ago",
   },
 ];
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="font-semibold uppercase tracking-[0.25em] text-orange-500">
-            Customer Feedback
+    <section
+      id="reviews"
+      className="py-24 bg-gradient-to-b from-white to-slate-100"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+
+        <div className="text-center mb-14" data-aos="fade-up">
+          <p className="uppercase tracking-[4px] text-orange-500 font-bold">
+            Google Reviews
           </p>
 
-          <h2 className="mt-3 text-4xl font-black text-slate-900 sm:text-5xl">
-            What Our Customers Say
+          <h2 className="text-4xl font-black mt-3 text-blue-700">
+            What Customers Say
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-slate-600">
-            Fast service, quality printing aur affordable prices ke liye
-            customers Harsh Photo State par bharosa karte hain.
+          <div className="flex justify-center items-center gap-1 mt-5">
+            {[1,2,3,4,5].map((i)=>(
+              <Star
+                key={i}
+                className="text-yellow-500 fill-yellow-500"
+                size={24}
+              />
+            ))}
+          </div>
+
+          <p className="mt-2 text-xl font-bold">
+            4.9 / 5 Rating
           </p>
+
         </div>
 
-        <div className="mt-14 grid gap-7 md:grid-cols-3">
-          {reviews.map((review) => (
-            <article
-              key={review.name}
-              className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+        <div className="grid lg:grid-cols-3 gap-8">
+
+          {reviews.map((item,index)=>(
+
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index*100}
+              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
             >
-              <div className="text-xl tracking-wider text-orange-500">
-                ★★★★★
+
+              <div className="flex items-center gap-4">
+
+                <div className="h-14 w-14 rounded-full bg-blue-700 text-white flex items-center justify-center text-xl font-bold">
+                  {item.name.charAt(0)}
+                </div>
+
+                <div>
+
+                  <h3 className="font-bold text-lg">
+                    {item.name}
+                  </h3>
+
+                  <p className="text-sm text-gray-500">
+                    {item.date}
+                  </p>
+
+                </div>
+
               </div>
 
-              <p className="mt-5 leading-8 text-slate-700">
-                “{review.review}”
+              <div className="flex mt-5 mb-4">
+                {[1,2,3,4,5].map((i)=>(
+                  <Star
+                    key={i}
+                    size={18}
+                    className="fill-yellow-500 text-yellow-500"
+                  />
+                ))}
+              </div>
+
+              <p className="leading-8 text-gray-600">
+                {item.review}
               </p>
 
-              <div className="mt-7 border-t border-slate-200 pt-5">
-                <p className="font-bold text-slate-900">{review.name}</p>
-                <p className="mt-1 text-sm text-slate-500">
-                  Harsh Photo State Customer
-                </p>
-              </div>
-            </article>
+            </div>
+
           ))}
+
         </div>
 
-        <div className="mt-12 text-center">
-          <a
-            href="https://maps.app.goo.gl/aKHfM7h4jc7DQZvaA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-xl bg-orange-500 px-7 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-orange-600"
-          >
-            View on Google Maps
-          </a>
-        </div>
       </div>
     </section>
   );
