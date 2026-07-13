@@ -11,15 +11,15 @@ import Contact from "../components/Contact";
 import Map from "../components/Map";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import MobileActionBar from "../components/MobileActionBar";
 
 export default function Home() {
   return (
     <>
       <AOSProvider />
-
       <Navbar />
 
-      <main>
+      <main className="pb-20 lg:pb-0">
         <Hero />
         <StatsCounter />
         <Services />
@@ -33,6 +33,7 @@ export default function Home() {
 
       <Footer />
       <WhatsAppButton />
+      <MobileActionBar />
     </>
   );
 }

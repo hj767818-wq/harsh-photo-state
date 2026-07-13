@@ -1,14 +1,20 @@
 "use client";
 
-import { Menu, Phone, Printer, ShoppingBag, X } from "lucide-react";
+import {
+  Menu,
+  Phone,
+  Printer,
+  ShoppingBag,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#price" },
-  { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -58,7 +64,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+919012957441"
-            className="inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-bold text-blue-700 transition duration-300 hover:-translate-y-0.5 hover:bg-blue-100"
+            className="inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm font-bold text-blue-700 transition hover:-translate-y-0.5 hover:bg-blue-100"
           >
             <Phone size={18} />
             Call Us
@@ -66,7 +72,7 @@ export default function Navbar() {
 
           <a
             href="#print-order"
-            className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-3 text-sm font-bold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-orange-600 hover:shadow-xl"
+            className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-5 py-3 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-orange-600"
           >
             <ShoppingBag size={18} />
             Order Now
@@ -76,9 +82,9 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen((current) => !current)}
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-700 text-white shadow-md transition hover:bg-blue-800 lg:hidden"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-700 text-white shadow-md lg:hidden"
         >
           {isOpen ? <X size={24} /> : <Menu size={25} />}
         </button>
@@ -98,34 +104,13 @@ export default function Navbar() {
               </a>
             ))}
 
-            <div className="mt-3 grid gap-3 sm:grid-cols-2">
-              <a
-                href="tel:+919012957441"
-                onClick={closeMenu}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-700 px-5 py-4 text-white transition hover:bg-blue-800"
-              >
-                <Phone size={19} />
-                Call Now
-              </a>
-
-              <a
-                href="#print-order"
-                onClick={closeMenu}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-5 py-4 text-white transition hover:bg-orange-600"
-              >
-                <ShoppingBag size={19} />
-                Order Now
-              </a>
-            </div>
-
             <a
-              href="https://wa.me/919012957441?text=Hello%20Harsh%20Photo%20State%2C%20mujhe%20printing%20karwani%20hai."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#print-order"
               onClick={closeMenu}
-              className="mt-1 rounded-xl bg-green-600 px-5 py-4 text-center text-white transition hover:bg-green-700"
+              className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-5 py-4 text-white"
             >
-              WhatsApp
+              <ShoppingBag size={19} />
+              Order Now
             </a>
           </div>
         </div>
