@@ -2,10 +2,13 @@ import AOSProvider from "../components/AOSProvider";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
+import PriceList from "../components/PriceList";
 import StudentCorner from "../components/StudentCorner";
 import Gallery from "../components/Gallery";
 import About from "../components/About";
+import WhyChooseUs from "../components/WhyChooseUs";
 import Reviews from "../components/Reviews";
+import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Map from "../components/Map";
 import Footer from "../components/Footer";
@@ -19,10 +22,13 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <PriceList />
       <StudentCorner />
       <Gallery />
       <About />
+      <WhyChooseUs />
       <Reviews />
+      <FAQ />
       <Contact />
       <Map />
       <Footer />
