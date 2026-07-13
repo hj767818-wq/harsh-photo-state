@@ -1,4 +1,5 @@
 import AOSProvider from "../components/AOSProvider";
+import LoadingScreen from "../components/LoadingScreen";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import StatsCounter from "../components/StatsCounter";
@@ -16,6 +17,7 @@ import MobileActionBar from "../components/MobileActionBar";
 export default function Home() {
   return (
     <>
+      <LoadingScreen />
       <AOSProvider />
       <Navbar />
 
