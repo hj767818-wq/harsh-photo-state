@@ -2,15 +2,10 @@ import AOSProvider from "../components/AOSProvider";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import StatsCounter from "../components/StatsCounter";
-import HowToOrder from "../components/HowToOrder";
 import Services from "../components/Services";
-import PhotoPrinting from "../components/PhotoPrinting";
 import PrintOrder from "../components/PrintOrder";
 import PriceList from "../components/PriceList";
-import StudentCorner from "../components/StudentCorner";
 import Gallery from "../components/Gallery";
-import About from "../components/About";
-import WhyChooseUs from "../components/WhyChooseUs";
 import Reviews from "../components/Reviews";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
@@ -24,22 +19,31 @@ export default function Home() {
       <AOSProvider />
 
       <Navbar />
-      <Hero />
-      <StatsCounter />
-      <HowToOrder />
-      <Services />
-      <PhotoPrinting />
-      <PrintOrder />
-      <PriceList />
-      <StudentCorner />
-      <Gallery />
-      <About />
-      <WhyChooseUs />
-      <Reviews />
-      <FAQ />
-      <Contact />
-      <Map />
+
+      <main>
+        <Hero />
+
+        <StatsCounter />
+
+        <Services />
+
+        <PrintOrder />
+
+        <PriceList />
+
+        <Gallery />
+
+        <Reviews />
+
+        <FAQ />
+
+        <Contact />
+
+        <Map />
+      </main>
+
       <Footer />
+
       <WhatsAppButton />
     </>
   );
