@@ -2,6 +2,7 @@ import AOSProvider from "../components/AOSProvider";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import StatsCounter from "../components/StatsCounter";
+import HowToOrder from "../components/HowToOrder";
 import Services from "../components/Services";
 import PhotoPrinting from "../components/PhotoPrinting";
 import PrintOrder from "../components/PrintOrder";
@@ -25,6 +26,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <StatsCounter />
+      <HowToOrder />
       <Services />
       <PhotoPrinting />
       <PrintOrder />
