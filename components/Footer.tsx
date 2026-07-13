@@ -10,10 +10,7 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-white">
-      <div
-        className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 lg:grid-cols-4"
-        data-aos="fade-up"
-      >
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-700">
@@ -40,7 +37,7 @@ export default function Footer() {
             href="https://wa.me/919012957441?text=Hello%20Harsh%20Photo%20State%2C%20mujhe%20printing%20karwani%20hai."
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-green-500 px-5 py-3 font-bold transition hover:-translate-y-1 hover:bg-green-600"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-green-600 px-5 py-3 font-bold transition hover:-translate-y-1 hover:bg-green-700"
           >
             <MessageCircle size={20} />
             WhatsApp Us
@@ -48,7 +45,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-bold text-orange-400">Quick Links</h3>
+          <h3 className="text-lg font-bold text-orange-400">
+            Quick Links
+          </h3>
 
           <div className="mt-5 space-y-3 text-slate-300">
             <a href="#home" className="block transition hover:text-white">
@@ -59,15 +58,15 @@ export default function Footer() {
               Services
             </a>
 
-            <a
-              href="#student-corner"
-              className="block transition hover:text-white"
-            >
-              Student Corner
+            <a href="#price" className="block transition hover:text-white">
+              Pricing
             </a>
 
-            <a href="#gallery" className="block transition hover:text-white">
-              Gallery
+            <a
+              href="#print-order"
+              className="block transition hover:text-white"
+            >
+              Order Now
             </a>
 
             <a href="#reviews" className="block transition hover:text-white">
@@ -81,20 +80,24 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-bold text-orange-400">Our Services</h3>
+          <h3 className="text-lg font-bold text-orange-400">
+            Our Services
+          </h3>
 
           <div className="mt-5 space-y-3 text-slate-300">
             <p>B&amp;W Printing</p>
             <p>Colour Printing</p>
             <p>Photocopy</p>
+            <p>A4 Photo Printing</p>
             <p>Project &amp; Thesis Printing</p>
-            <p>Binding &amp; Lamination</p>
-            <p>PVC Card Printing</p>
+            <p>Binding, Lamination &amp; PVC Cards</p>
           </div>
         </div>
 
         <div>
-          <h3 className="text-lg font-bold text-orange-400">Contact</h3>
+          <h3 className="text-lg font-bold text-orange-400">
+            Contact
+          </h3>
 
           <div className="mt-5 space-y-5 text-slate-300">
             <div className="flex items-start gap-3">

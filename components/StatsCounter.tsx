@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import {
   Clock3,
   MapPin,
@@ -8,47 +5,10 @@ import {
   Printer,
 } from "lucide-react";
 
-type CounterProps = {
-  target: number;
-  suffix?: string;
-};
-
-function Counter({ target, suffix = "" }: CounterProps) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let current = 0;
-    const duration = 1200;
-    const steps = 40;
-    const increment = target / steps;
-
-    const timer = window.setInterval(() => {
-      current += increment;
-
-      if (current >= target) {
-        setCount(target);
-        window.clearInterval(timer);
-        return;
-      }
-
-      setCount(Math.floor(current));
-    }, duration / steps);
-
-    return () => window.clearInterval(timer);
-  }, [target]);
-
-  return (
-    <span>
-      {count}
-      {suffix}
-    </span>
-  );
-}
-
 const stats = [
   {
     icon: Printer,
-    value: <Counter target={8} suffix="+" />,
+    value: "8+",
     title: "Printing Services",
     description: "Printing, binding, PVC, lamination and more",
   },

@@ -5,7 +5,6 @@ import StatsCounter from "../components/StatsCounter";
 import Services from "../components/Services";
 import PrintOrder from "../components/PrintOrder";
 import PriceList from "../components/PriceList";
-import Gallery from "../components/Gallery";
 import Reviews from "../components/Reviews";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
@@ -22,28 +21,17 @@ export default function Home() {
 
       <main>
         <Hero />
-
         <StatsCounter />
-
         <Services />
-
         <PrintOrder />
-
         <PriceList />
-
-        <Gallery />
-
         <Reviews />
-
         <FAQ />
-
         <Contact />
-
         <Map />
       </main>
 
       <Footer />
-
       <WhatsAppButton />
     </>
   );

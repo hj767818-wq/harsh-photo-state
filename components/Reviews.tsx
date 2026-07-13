@@ -1,112 +1,66 @@
-"use client";
-
-import { Star } from "lucide-react";
-
-const reviews = [
-  {
-    name: "Aman Sharma",
-    review:
-      "Very fast printing service. Project printing aur spiral binding bahut achi quality ki thi.",
-    date: "2 weeks ago",
-  },
-  {
-    name: "Priya Verma",
-    review:
-      "Colour print quality amazing thi. Staff bhi bahut polite tha.",
-    date: "1 month ago",
-  },
-  {
-    name: "Rohit Kumar",
-    review:
-      "PVC Card same day bana diya. Highly recommended.",
-    date: "3 weeks ago",
-  },
-];
+import {
+  MessageCircle,
+  Star,
+} from "lucide-react";
 
 export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="py-24 bg-gradient-to-b from-white to-slate-100"
+      className="bg-gradient-to-b from-white to-slate-100 py-24"
     >
-      <div className="max-w-7xl mx-auto px-6">
-
-        <div className="text-center mb-14" data-aos="fade-up">
-          <p className="uppercase tracking-[4px] text-orange-500 font-bold">
-            Google Reviews
+      <div className="mx-auto max-w-7xl px-6">
+        <div
+          className="mx-auto max-w-3xl text-center"
+          data-aos="fade-up"
+        >
+          <p className="font-bold uppercase tracking-[0.25em] text-orange-500">
+            Customer Feedback
           </p>
 
-          <h2 className="text-4xl font-black mt-3 text-blue-700">
-            What Customers Say
+          <h2 className="mt-3 text-4xl font-black text-blue-700 sm:text-5xl">
+            Share Your Experience
           </h2>
 
-          <div className="flex justify-center items-center gap-1 mt-5">
-            {[1,2,3,4,5].map((i)=>(
+          <p className="mt-5 text-lg leading-8 text-slate-600">
+            Harsh Photo State se service lene ke baad apna genuine review
+            Google Maps par share kijiye.
+          </p>
+        </div>
+
+        <div
+          className="mx-auto mt-12 max-w-3xl rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-xl sm:p-12"
+          data-aos="zoom-in"
+        >
+          <div className="flex justify-center gap-1">
+            {[1, 2, 3, 4, 5].map((item) => (
               <Star
-                key={i}
-                className="text-yellow-500 fill-yellow-500"
-                size={24}
+                key={item}
+                size={27}
+                className="fill-yellow-400 text-yellow-400"
               />
             ))}
           </div>
 
-          <p className="mt-2 text-xl font-bold">
-            4.9 / 5 Rating
+          <h3 className="mt-6 text-2xl font-black text-slate-900">
+            Customer Reviews Coming Soon
+          </h3>
+
+          <p className="mx-auto mt-4 max-w-xl leading-7 text-slate-600">
+            Real customer reviews milne ke baad unhe yahan website par show
+            kiya jayega.
           </p>
 
+          <a
+            href="https://maps.app.goo.gl/aKHfM7h4jc7DQZvaA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-7 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-700 px-7 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-blue-800"
+          >
+            <MessageCircle size={20} />
+            View or Add Google Review
+          </a>
         </div>
-
-        <div className="grid lg:grid-cols-3 gap-8">
-
-          {reviews.map((item,index)=>(
-
-            <div
-              key={index}
-              data-aos="fade-up"
-              data-aos-delay={index*100}
-              className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition"
-            >
-
-              <div className="flex items-center gap-4">
-
-                <div className="h-14 w-14 rounded-full bg-blue-700 text-white flex items-center justify-center text-xl font-bold">
-                  {item.name.charAt(0)}
-                </div>
-
-                <div>
-
-                  <h3 className="font-bold text-lg">
-                    {item.name}
-                  </h3>
-
-                  <p className="text-sm text-gray-500">
-                    {item.date}
-                  </p>
-
-                </div>
-
-              </div>
-
-              <div className="flex mt-5 mb-4">
-                {[1,2,3,4,5].map((i)=>(
-                  <Star
-                    key={i}
-                    size={18}
-                    className="fill-yellow-500 text-yellow-500"
-                  />
-                ))}
-              </div>
-
-              <p className="leading-8 text-gray-600">
-                {item.review}
-              </p>
-
-            </div>
-
-          ))}
-
-        </div>
-
       </div>
     </section>
   );
