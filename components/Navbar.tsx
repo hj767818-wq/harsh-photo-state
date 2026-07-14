@@ -29,13 +29,13 @@ export default function Navbar() {
           className="flex min-w-0 items-center"
         >
           <Image
-            src="/images/logo.png"
-            alt="Harsh Photo State Logo"
-            width={1154}
-            height={407}
-            priority
-            className="h-12 w-auto object-contain sm:h-14 lg:h-16"
-          />
+  src="/images/logo.png"
+  alt="Harsh Photo State Logo"
+  width={1154}
+  height={407}
+  priority
+  className="h-12 w-auto object-contain sm:h-14 lg:h-16"
+/>
         </a>
 
         <div className="hidden items-center gap-6 text-sm font-bold text-slate-700 lg:flex">

@@ -132,12 +132,13 @@ export default function Hero() {
 
                   <div className="hidden rounded-2xl bg-white p-3 shadow-lg sm:block">
                     <Image
-                      src="/images/logo.png"
-                      alt="Harsh Photo State Logo"
-                      width={150}
-                      height={60}
-                      className="h-14 w-auto object-contain"
-                    />
+  src="/images/logo.png"
+  alt="Harsh Photo State Logo"
+  width={1154}
+  height={407}
+  priority
+  className="h-12 w-auto object-contain sm:h-14 lg:h-16"
+/>
                   </div>
                 </div>
 
