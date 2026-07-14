@@ -1,10 +1,10 @@
+import Image from "next/image";
 import {
   Mail,
   MapPin,
   MessageCircle,
   Navigation,
   Phone,
-  Printer,
 } from "lucide-react";
 
 export default function Footer() {
@@ -12,20 +12,14 @@ export default function Footer() {
     <footer className="bg-slate-950 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-700">
-              <Printer size={25} />
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-black">
-                HARSH <span className="text-orange-400">PHOTO STATE</span>
-              </h2>
-
-              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-slate-400">
-                Print • Copy • Create
-              </p>
-            </div>
+          <div className="inline-flex rounded-2xl bg-white p-3">
+            <Image
+              src="/images/logo.png"
+              alt="Harsh Photo State Logo"
+              width={1154}
+              height={407}
+              className="h-16 w-auto object-contain"
+            />
           </div>
 
           <p className="mt-6 max-w-sm leading-7 text-slate-300">
@@ -45,9 +39,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-bold text-orange-400">
-            Quick Links
-          </h3>
+          <h3 className="text-lg font-bold text-orange-400">Quick Links</h3>
 
           <div className="mt-5 space-y-3 text-slate-300">
             <a href="#home" className="block transition hover:text-white">
@@ -80,9 +72,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-bold text-orange-400">
-            Our Services
-          </h3>
+          <h3 className="text-lg font-bold text-orange-400">Our Services</h3>
 
           <div className="mt-5 space-y-3 text-slate-300">
             <p>B&amp;W Printing</p>
@@ -95,9 +85,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-bold text-orange-400">
-            Contact
-          </h3>
+          <h3 className="text-lg font-bold text-orange-400">Contact</h3>
 
           <div className="mt-5 space-y-5 text-slate-300">
             <div className="flex items-start gap-3">

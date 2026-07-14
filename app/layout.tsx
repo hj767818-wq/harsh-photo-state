@@ -42,12 +42,25 @@ export const metadata: Metadata = {
     canonical: "/",
   },
 
+  icons: {
+    icon: "/icon",
+    apple: "/apple-icon",
+  },
+
   openGraph: {
     title: "Harsh Photo State | Printing Shop in Moradabad",
     description:
       "Printing, photocopy, colour printing, A4 photo printing, project printing, binding, lamination and PVC card services in Budh Bazar, Moradabad.",
     url: siteUrl,
     siteName: "Harsh Photo State",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Harsh Photo State Printing Shop in Moradabad",
+      },
+    ],
     locale: "en_IN",
     type: "website",
   },
@@ -57,6 +70,7 @@ export const metadata: Metadata = {
     title: "Harsh Photo State | Printing Shop in Moradabad",
     description:
       "Fast and affordable printing services in Budh Bazar, Moradabad.",
+    images: ["/opengraph-image"],
   },
 
   robots: {
@@ -82,7 +96,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "Store",
   name: "Harsh Photo State",
-  image: `${siteUrl}/icon`,
+  logo: `${siteUrl}/images/logo.png`,
+  image: `${siteUrl}/images/logo.png`,
   url: siteUrl,
   telephone: ["+91 9012957441", "+91 8171746421"],
   email: "harshphotostate@gmail.com",
