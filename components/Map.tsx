@@ -1,6 +1,8 @@
 import {
   Clock3,
+  Mail,
   MapPin,
+  MessageCircle,
   Navigation,
   Phone,
 } from "lucide-react";
@@ -10,7 +12,7 @@ const mapEmbedUrl =
 
 export default function Map() {
   return (
-    <section className="bg-white py-24" id="location">
+    <section id="location" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div
           className="mx-auto max-w-3xl text-center"
@@ -31,13 +33,13 @@ export default function Map() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[1.35fr_0.65fr]">
           <div
-            className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl"
+            className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl"
             data-aos="fade-right"
           >
             <iframe
               src={mapEmbedUrl}
               width="100%"
-              height="520"
+              height="540"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
@@ -48,7 +50,7 @@ export default function Map() {
           </div>
 
           <div
-            className="rounded-3xl bg-slate-950 p-8 text-white shadow-xl"
+            className="rounded-[2rem] bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 p-8 text-white shadow-2xl"
             data-aos="fade-left"
           >
             <div className="flex items-start gap-4">
@@ -117,15 +119,44 @@ export default function Map() {
               </div>
             </div>
 
-            <a
-              href="https://maps.app.goo.gl/aKHfM7h4jc7DQZvaA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-10 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 px-6 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-orange-600"
-            >
-              <Navigation size={20} />
-              Get Directions
-            </a>
+            <div className="mt-8 flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-orange-500">
+                <Mail size={24} />
+              </div>
+
+              <div>
+                <h3 className="text-xl font-black">Email</h3>
+
+                <a
+                  href="mailto:harshphotostate@gmail.com"
+                  className="mt-2 block break-all text-slate-300 transition hover:text-white"
+                >
+                  harshphotostate@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-10 grid gap-3">
+              <a
+                href="https://maps.app.goo.gl/aKHfM7h4jc7DQZvaA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 px-6 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-orange-600"
+              >
+                <Navigation size={20} />
+                Get Directions
+              </a>
+
+              <a
+                href="https://wa.me/919012957441?text=Hello%20Harsh%20Photo%20State%2C%20mujhe%20shop%20location%20chahiye."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-green-600 px-6 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-green-700"
+              >
+                <MessageCircle size={20} />
+                Ask Location on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>

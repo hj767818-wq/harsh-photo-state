@@ -1,35 +1,35 @@
+import Image from "next/image";
 import {
   BadgeCheck,
   Clock3,
   FileText,
   MapPin,
+  MessageCircle,
   Phone,
   Printer,
-  Star,
-  Users,
   Zap,
 } from "lucide-react";
 
 const trustItems = [
   {
-    icon: Star,
-    title: "4.9 Rating",
-    text: "Google Customers",
+    icon: Printer,
+    title: "8+ Services",
+    text: "Complete print solutions",
   },
   {
-    icon: Users,
-    title: "1000+",
-    text: "Happy Customers",
+    icon: Clock3,
+    title: "Same Day",
+    text: "Fast regular printing",
   },
   {
-    icon: Zap,
-    title: "Fast Service",
-    text: "Quick Turnaround",
+    icon: MessageCircle,
+    title: "WhatsApp",
+    text: "Easy online enquiry",
   },
   {
-    icon: BadgeCheck,
-    title: "Trusted",
-    text: "Local Print Shop",
+    icon: MapPin,
+    title: "Budh Bazar",
+    text: "Moradabad location",
   },
 ];
 
@@ -39,16 +39,14 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-gradient-to-br from-blue-100 via-blue-50 to-orange-100"
     >
-      {/* Background Effects */}
       <div className="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-blue-300/40 blur-3xl" />
 
       <div className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-orange-300/40 blur-3xl" />
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.75),transparent_38%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.8),transparent_40%)]" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 py-10 sm:px-6 sm:py-14 lg:py-16">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          {/* Left Content */}
+      <div className="relative mx-auto w-full max-w-7xl px-5 py-12 sm:px-6 sm:py-16 lg:py-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div data-aos="fade-right">
             <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-orange-200 bg-white/90 px-4 py-2 text-sm font-semibold text-orange-600 shadow-sm backdrop-blur sm:text-base">
               <MapPin size={18} className="shrink-0" />
@@ -69,8 +67,9 @@ export default function Hero() {
             </p>
 
             <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              Fast printing, photocopy, project and thesis printing, spiral
-              binding, lamination and PVC card services at affordable prices.
+              Fast printing, photocopy, colour printing, project and thesis
+              printing, binding, lamination and PVC card services at affordable
+              prices.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -100,7 +99,7 @@ export default function Hero() {
                 return (
                   <div
                     key={item.title}
-                    className="rounded-2xl border border-white/80 bg-white/85 p-4 shadow-md backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="rounded-2xl border border-white/80 bg-white/90 p-4 shadow-md backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                   >
                     <Icon className="text-orange-500" size={23} />
 
@@ -117,7 +116,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Card */}
           <div className="relative" data-aos="fade-left">
             <div className="rounded-[2rem] border border-white/80 bg-white/90 p-5 shadow-2xl backdrop-blur-xl sm:p-6">
               <div className="rounded-3xl bg-gradient-to-br from-blue-700 via-blue-800 to-blue-950 p-7 text-white sm:p-8">
@@ -132,8 +130,14 @@ export default function Hero() {
                     </h2>
                   </div>
 
-                  <div className="hidden rounded-2xl bg-white/10 p-4 sm:block">
-                    <Printer size={46} />
+                  <div className="hidden rounded-2xl bg-white p-3 shadow-lg sm:block">
+                    <Image
+                      src="/images/logo.png"
+                      alt="Harsh Photo State Logo"
+                      width={150}
+                      height={60}
+                      className="h-14 w-auto object-contain"
+                    />
                   </div>
                 </div>
 
@@ -174,6 +178,14 @@ export default function Hero() {
                   </p>
                 </div>
               </div>
+
+              <a
+                href="#print-order"
+                className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 px-6 py-4 font-bold text-white transition hover:-translate-y-1 hover:bg-orange-600"
+              >
+                <Zap size={20} />
+                Place Printing Order
+              </a>
             </div>
           </div>
         </div>
