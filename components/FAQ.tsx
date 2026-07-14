@@ -30,57 +30,49 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-slate-50 py-24" id="faq">
+    <section id="faq" className="bg-slate-50 py-24">
       <div className="mx-auto max-w-4xl px-6">
-
         <div className="text-center" data-aos="fade-up">
           <p className="font-bold uppercase tracking-[0.25em] text-orange-500">
             FAQ
           </p>
 
-          <h2 className="mt-3 text-4xl font-black text-blue-700">
+          <h2 className="mt-3 text-4xl font-black text-blue-700 sm:text-5xl">
             Frequently Asked Questions
           </h2>
         </div>
 
         <div className="mt-12 space-y-5">
-
           {faqs.map((faq, index) => (
-
             <div
-              key={index}
+              key={faq.question}
               data-aos="fade-up"
               data-aos-delay={index * 80}
-              className="overflow-hidden rounded-2xl bg-white shadow-md"
+              className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md"
             >
-
               <button
-                onClick={() =>
-                  setOpen(open === index ? null : index)
-                }
-                className="flex w-full items-center justify-between px-6 py-5 text-left font-bold"
+                type="button"
+                onClick={() => setOpen(open === index ? null : index)}
+                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-bold text-slate-900 transition hover:bg-slate-50"
               >
-                {faq.question}
+                <span>{faq.question}</span>
 
                 <ChevronDown
-                  className={`transition ${
+                  size={22}
+                  className={`shrink-0 text-blue-700 transition duration-300 ${
                     open === index ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               {open === index && (
-                <div className="border-t px-6 py-5 text-slate-600">
+                <div className="border-t border-slate-200 px-6 py-5 leading-7 text-slate-600">
                   {faq.answer}
                 </div>
               )}
-
             </div>
-
           ))}
-
         </div>
-
       </div>
     </section>
   );
